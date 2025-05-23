@@ -61,7 +61,7 @@ function renderMainPage() {
         <form id="form">
             <i class="fa-solid fa-magnifying-glass search-i"></i>
             <input class="search-bar" name="movieName" type="text" aria-label="Search bar, for finding your movies" placeholder="Search for a movie">
-            <button class="search-btn" type="submit">Submit</button>
+            <button class="search-btn" type="submit">Search</button>
         </form>
         <div class="notfound">
             <i class="movie-i fa-solid fa-film"></i>
