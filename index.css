@@ -1,0 +1,168 @@
+body {
+    color: white;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    padding-top: 1em;
+}
+.container {
+    margin-left: 2em;
+    margin-right: 2em;
+    
+}
+
+header {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    background-color: rgb(201, 201, 201);
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+    column-gap: 1em;
+    padding: 3.5em 3em;
+}
+
+h1 {
+    margin: 0;
+}
+
+.header-btn, .add-remove-watchlist-btn {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    
+}
+
+.header-btn {
+    font-weight: 700;
+    padding: 0;
+}
+
+.add-remove-watchlist-btn {
+    font-weight: 600;
+    color: black;
+}
+
+form {
+    max-width: 850px;
+    width: 90vw;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateY(-50%) translateX(-50%);
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    
+}
+
+.search-bar, .search-btn {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 0.5em;
+    border: 1px #D1D5DB solid;
+    border-radius: 6px;
+
+}
+
+.search-bar {
+    color: #6B7280;
+    border-right: none;
+    border-radius: 6px 0px 0px 6px;
+    padding-left: 30px;
+
+}
+
+.search-btn {
+    background-color: #F9FAFB;
+    color: #374151;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.search-i {
+    color: rgb(73, 73, 73);
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    transform: translateY(-50%)
+}
+
+.movie-i {
+    color: #DFDDDD;
+    font-size: 3rem;
+}
+
+.movie-container {
+    max-width: 750px;
+    margin: auto;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 1.4em;
+    border-bottom: rgba(128, 128, 128, 0.513) solid 1px;
+    padding: 1.5em 0 ;
+}
+
+
+.poster-div {
+    display: flex;
+    align-items: center;
+    width: clamp(90px, 20vw, 200px);
+    height: clamp(135px, 30vw, 300px);
+}
+
+.movie-poster {
+    width: clamp(90px, 20vw, 200px);
+    border-radius: 5px;
+}
+
+.movie-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.movie-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.movie-puntuation {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    font-size: 0.8rem;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+.notfound {
+    text-align: center;
+    color: #DFDDDD;
+    font-weight: 700;
+    margin-top: 25vh;
+}
+.notfound p{
+    margin: 0.2em;
+}
+
+.hide {
+    display: none;
+}
