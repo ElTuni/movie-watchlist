@@ -9,7 +9,7 @@ document.addEventListener("submit", async(e) => {
     mainEl.replaceChildren(mainEl.firstElementChild)
     
     const movieName = e.target.movieName.value
-    const response = await fetch(`http://www.omdbapi.com/?apikey=a0d3b366&s=${movieName}`)
+    const response = await fetch(`https://www.omdbapi.com/?apikey=a0d3b366&s=${movieName}`)
     const data = await response.json()
 
     if (data.Response === 'True') {
@@ -84,7 +84,7 @@ function renderWatchlist(){
 
 async function renderMovies(movieId) {
     // buscamos en la api, la pelicula especifica segun su id
-    const subResponse = await fetch(`http://www.omdbapi.com/?apikey=a0d3b366&i=${movieId}`) 
+    const subResponse = await fetch(`https://www.omdbapi.com/?apikey=a0d3b366&i=${movieId}`) 
     const movie = await subResponse.json()
 
     // creamos la article
