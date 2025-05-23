@@ -30,17 +30,25 @@ document.addEventListener("click", (e) => {
     // renderizamos la watchlistpage, si es que apreta el boton para verlo
     if (btnValue === "mywatchlist") {
         renderWatchlist()
+        history.pushState({id:"watchlistpage"}, "", "/watchlist")
     } 
     // renderizamos la mainpage, si es que apreta el boton para volver, desde la wachlistpage
     else if (btnValue === "searchformovies" || e.target.closest('[data-btn="searchformovies"]')) {
         renderMainPage()
+        history.pushState({id:"mainpage"}, "", "/main")
     } 
     else if (e.target.closest('[data-btn="addremovewatchlist"]')) {
         updateLocalStorage(e.target.closest('[data-btn="addremovewatchlist"]'))
     }
 })
 
-
+window.onpopstate = (e) => {
+    if (window.location.pathname === "/main") {
+        renderMainPage()
+    } else if (window.location.pathname === "/watchlist") {
+        renderWatchlist()
+    }
+}
 
 
 
@@ -175,4 +183,4 @@ function updateLocalStorage(btn) {
 }
 
 renderMainPage()
-
+history.replaceState({id: "mainpage"}, '', "/main")
